@@ -7,7 +7,10 @@ import CheckoutForm from "./components/CheckoutForm";
 
 import "./App.css";
 
+
+
 function App() {
+  
   // array of plants that have been added to the cart
   const [cart, setCart] = useState([]);
 
@@ -21,6 +24,8 @@ function App() {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
 
+
+  
   return (
     <div>
       <Router>
