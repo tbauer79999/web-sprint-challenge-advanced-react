@@ -5,16 +5,18 @@ import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 import "./App.css";
 
+
 function App() {
   const [cart, setCart] = useState([]);
   const addToCart = (plant) => {
     setCart([...cart, plant]);
   };
 
+  
   const removeFromCart = (plant) => {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
-  
+
   return (
     <div>
       <Router>
