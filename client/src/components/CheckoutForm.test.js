@@ -14,7 +14,8 @@ test("form shows success message on submit with form details", () => {
     const { getByTestId } = render(<CheckoutForm />)
     const submit = getByTestId('formSubmit')
     fireEvent.click(submit)
-    getByTestId('successMessage')
+    const message = getByTestId('successMessage')
+    expect(message).toBeInTheDocument();
  });
 
 
